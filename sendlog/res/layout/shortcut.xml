@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/shortcut_name_title"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:layout_marginLeft="5dip"
+	    android:layout_marginTop="2dip" />
+	<EditText
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:id="@+id/shortcut_name"
+	    android:hint="@string/shortcut_name_hint"
+	    android:layout_marginLeft="3dip"
+	    android:layout_marginRight="3dip" />
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/shortcut_destination_title"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:layout_marginLeft="5dip" />
+	<EditText
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_width="fill_parent"
+	    android:id="@+id/shortcut_destination"
+        android:hint="@string/shortcut_destination_hint"
+	    android:layout_marginLeft="3dip"
+	    android:layout_marginRight="3dip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/format_dialog_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="5dip" />
+	<Spinner 
+	    android:id="@+id/format_spinner"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:entries="@array/format_list" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shortcut_sender_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="5dip" />
+    <Spinner 
+        android:id="@+id/sender_spinner"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" />
+
+	<View
+	    android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_width="fill_parent" />
+
+	<LinearLayout
+	    android:layout_height="wrap_content"
+        android:background="@android:drawable/bottom_bar"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+	<Button
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:id="@+id/shortcut_ok" />
+	<Button
+        android:layout_height="wrap_content"
+        android:id="@+id/shortcut_cancel"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:text="@android:string/cancel" />
+	</LinearLayout>
+
+</LinearLayout>

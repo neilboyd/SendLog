@@ -1,0 +1,10 @@
+.svn
+bin
+gen
+local.properties
+*~
+*.orig
+.idea/
+out/
+*.iml
+target/

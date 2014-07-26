@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">sendlog-userapp</string>
+    <string name="hello">Hello sendlog-userapp!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Click here to launch SendLog using an Intent</string>
+
+</resources>
