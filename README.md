@@ -30,7 +30,7 @@ but for now you should just download the source and reference it.
 Create an activity called `SendLogActivity` in your project which extends
 `org.l6n.sendlog.library.SendLogActivityBase`.
 
-Implement the following method
+Implement the following method  
 `@Override protected String getDestinationAddress() { return "android@L6n.org"; }`.  
 Obviously you should use your own email address instead of mine for users to send their logs to.
 
