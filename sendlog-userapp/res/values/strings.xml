@@ -2,8 +2,7 @@
 <resources>
 
     <string name="app_name">sendlog-userapp</string>
-    <string name="hello">Hello sendlog-userapp!</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Click here to launch SendLog using an Intent</string>
+    <string name="intent">Click here to launch SendLog using an Intent</string>
+    <string name="embedded">Click here to launch SendLog using embedded Activity</string>
 
 </resources>

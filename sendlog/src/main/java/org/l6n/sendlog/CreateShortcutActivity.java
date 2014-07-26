@@ -1,13 +1,10 @@
 package org.l6n.sendlog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.Intent.ShortcutIconResource;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -17,13 +14,16 @@ import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreateShortcutActivity extends Activity implements TextWatcher, OnClickListener {
 
@@ -123,6 +123,7 @@ public class CreateShortcutActivity extends Activity implements TextWatcher, OnC
 
             final CharSequence dest = mDestView.getText();
             final int format = mFormatSpinner.getSelectedItemPosition();
+            // TODO could change format to be String, but that's not backward-compatible
             final int senderPos = mSenderSpinner.getSelectedItemPosition();
             final ResolveInfo ri = mSenderAdapter.ri.get(senderPos);
 

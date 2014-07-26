@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.l6n.sendlog.userapp"
-    android:versionCode="1"
-    android:versionName="1.3-SNAPSHOT">
+          package="org.l6n.sendlog.userapp"
+          android:versionCode="1"
+          android:versionName="2.0-SNAPSHOT">
 
     <uses-sdk
         android:minSdkVersion="3"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="19"/>
 
     <uses-permission android:name="android.permission.READ_LOGS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
 
     <application
         android:allowBackup="true"
@@ -19,11 +18,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".HelloAndroidActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SendLogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     </application>
 
 </manifest>

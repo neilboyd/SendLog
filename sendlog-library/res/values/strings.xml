@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SendLog</string>
+
+    <string name="progress_dialog_text">Gathering log data. Please wait...</string>
+
+    <string name="email_text">Generated with SendLog%1$s\n\n%2$s %3$s %4$s %5$s\n\nhttp://L6n.org/android/\n\nAttachment: %6$s (%7$s kb)</string>
+    <string name="footer">--- end of log</string>
+
+    <string name="no_permission">SendLog has no permission to read logs</string>
+    <string name="bad_exit_code">Failed to run process</string>
+
+    <string name="format_dialog_title">Format</string>
+    <string name="format_dialog_send">Send</string>
+    <string name="format_dialog_cancel">Cancel</string>
+
+    <string-array name="format_list">
+        <item>brief</item>
+        <item>process</item>
+        <item>tag</item>
+        <item>thread</item>
+        <item>raw</item>
+        <item>time</item>
+        <item>threadtime</item>
+        <item>long</item>
+    </string-array>
+
+</resources>
