@@ -35,6 +35,17 @@
 		<android.plugin.version>3.8.2</android.plugin.version>
 	</properties>
 
+    <developers>
+        <developer>
+            <id>neilboyd</id>
+            <name>Neil Boyd</name>
+            <roles>
+                <role>developer</role>
+                <role>contributor</role>
+            </roles>
+        </developer>
+    </developers>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
