@@ -22,9 +22,16 @@ There is a sample project `sendlog-userapp` which demonstrates all the steps
 described below.
 
 ###Add a dependency to sendlog-library
-Shortly I will add the project to
-[Maven Central](http://search.maven.org/),
-but for now you should just download the source and reference it.
+If you're using Maven you can simply add this dependency
+```
+<dependency>
+   <groupId>org.l6n</groupId>
+   <artifactId>sendlog-library</artifactId>
+   <version>2.0</version>
+   <type>pom</type>
+</dependency>
+```
+Otherwise you can just download the source and reference it.
 
 ###Extend `SendLogActivityBase` and implement one method
 Create an activity called `SendLogActivity` in your project which extends
