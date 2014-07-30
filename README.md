@@ -28,7 +28,7 @@ If you're using Maven you can simply add this dependency
    <groupId>org.l6n</groupId>
    <artifactId>sendlog-library</artifactId>
    <version>2.0</version>
-   <type>pom</type>
+   <type>aar</type>
 </dependency>
 ```
 Otherwise you can just download the source and reference it.
@@ -46,8 +46,8 @@ In your manifest, add the activity created above
 `<activity android:name=".SendLogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>`
 
 ###Start the activity at a suitable point in your app
-Somewhere in your app, for example in a Help or About menu, you'll want to allow users to send
-the log.  
+Somewhere in your app you'll want to allow users to send the log,
+for example in a Help or About menu.  
 `startActivity(new Intent(this, SendLogActivity.class));`
 
 That's it!
