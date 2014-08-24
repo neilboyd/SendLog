@@ -48,6 +48,12 @@ public class SendLog extends SendLogActivityBase {
     }
 
     @Override
+    protected void setLogFormat(final int pFormat) {
+        super.setLogFormat(pFormat);
+        mFormatString = super.getLogFormat();
+    }
+
+    @Override
     protected String getSenderApp() {
         return mSender;
     }
@@ -85,8 +91,7 @@ public class SendLog extends SendLogActivityBase {
             mDestination = type;
         } else {
             try {
-                final int format = Integer.parseInt(type.substring(0, i));
-                mFormatString = getResources().getStringArray(R.array.format_list)[format];
+                setLogFormat(Integer.parseInt(type.substring(0, i)));
             } catch (final Exception e) {
                 Log.w(TAG, "Error parsing format: ", e);
             }

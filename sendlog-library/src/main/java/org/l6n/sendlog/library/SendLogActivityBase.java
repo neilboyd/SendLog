@@ -33,7 +33,7 @@ public abstract class SendLogActivityBase extends Activity implements ISendLog {
     // persist the format selection
     public static final String FORMAT_PREFERENCE = "FORMAT";
     public static final int FORMAT_DEFAULT = 5; // time
-    private int mFormat = FORMAT_DEFAULT;
+    private int mFormat = FORMAT_DEFAULT; // don't set directly - always call setLogFormat
 
     private ProgressDialog mProgressDialog;
 
@@ -74,6 +74,10 @@ public abstract class SendLogActivityBase extends Activity implements ISendLog {
             return formats[mFormat];
         }
         return formats[FORMAT_DEFAULT];
+    }
+
+    protected void setLogFormat(final int pFormat) {
+        mFormat = pFormat;
     }
 
     /**
@@ -285,7 +289,7 @@ public abstract class SendLogActivityBase extends Activity implements ISendLog {
             final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(SendLogActivityBase.this);
 
             if (which == DialogInterface.BUTTON_POSITIVE) {
-                mFormat = sp.getInt(FORMAT_PREFERENCE, FORMAT_DEFAULT);
+                setLogFormat(sp.getInt(FORMAT_PREFERENCE, FORMAT_DEFAULT));
                 Log.d(TAG, "Send the email with format " + mFormat);
                 sendLog();
                 mFinishLater = true;
