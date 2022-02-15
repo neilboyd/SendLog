@@ -1,4 +1,4 @@
-#SendLog
+# SendLog
 
 [SendLog](http://l6n.org/android/sendlog.shtml)
 was originally released as an app to
@@ -9,19 +9,19 @@ the app became a bit useless.
 TL;DR: an app can only read it's own logs.  
 That is why I decided to open source it so that you can include it in your own app.
 
-##Brief Instructions
+## Brief Instructions
  - Add a dependency to sendlog-library
  - Extend `SendLogActivityBase` and implement one method
  - Add your activity to the manifest with translucent theme
  - Start the activity at a suitable point in your app
 
-##Detailed Instructions
+## Detailed Instructions
 
-###Example
+### Example
 There is a sample project `sendlog-userapp` which demonstrates all the steps
 described below.
 
-###Add a dependency to sendlog-library
+### Add a dependency to sendlog-library
 If you're using Maven you can simply add this dependency
 ```
 <dependency>
@@ -33,7 +33,7 @@ If you're using Maven you can simply add this dependency
 ```
 Otherwise you can just download the source and reference it.
 
-###Extend `SendLogActivityBase` and implement one method
+### Extend `SendLogActivityBase` and implement one method
 Create an activity called `SendLogActivity` in your project which extends
 `org.l6n.sendlog.library.SendLogActivityBase`.
 
@@ -41,11 +41,11 @@ Implement the following method
 `@Override protected String getDestinationAddress() { return "android@L6n.org"; }`.  
 Obviously you should use your own email address instead of mine for users to send their logs to.
 
-###Add your activity to the manifest with translucent theme
+### Add your activity to the manifest with translucent theme
 In your manifest, add the activity created above  
 `<activity android:name=".SendLogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>`
 
-###Start the activity at a suitable point in your app
+### Start the activity at a suitable point in your app
 Somewhere in your app you'll want to allow users to send the log,
 for example in a Help or About menu.  
 `startActivity(new Intent(this, SendLogActivity.class));`
